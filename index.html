@@ -6,12 +6,27 @@
     <title>随机图床</title>
     <link id="favicon" rel="icon" href="" type="image/x-icon">
     <style>
-body {
-    background-image: url('./index.png');
-    background-repeat: no-repeat;
-    background-size: cover; /* 或使用contain等其他值 */
-}
-body {
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('./index.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            /* 或者使用 contain 等其他值 */
+        }
+
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -66,34 +81,35 @@ body {
             }
         }
     </style>
-    </head>
-    <body>
-        <img id="randomImage" src="" alt="">
-        <script>
-    const apis = [
-        'https://t.mwm.moe/ycy',
-        'https://t.mwm.moe/ysz',
-        'https://t.mwm.moe/moez',
-        'https://t.mwm.moe/ysmp',
-        'https://t.mwm.moe/moemp'
-    ];
+</head>
 
-    const randomIndex = Math.floor(Math.random() * apis.length);
-    const randomApi = apis[randomIndex];
-    document.getElementById('randomImage').src = randomApi;
-</script>
-<script>
-    const iconUrls = [
-        'https://t.mwm.moe/ycy',
-        'https://t.mwm.moe/ysz',
-        'https://t.mwm.moe/moez',
-        'https://t.mwm.moe/ysmp',
-        'https://t.mwm.moe/moemp'
-    ];
-    const ICOIndex = Math.floor(Math.random() * iconUrls.length);
-    const randomIconUrl = iconUrls[ICOIndex];
-    document.getElementById('favicon').href = randomIconUrl;
-</script>
-    </body>
+<body>
+    <img id="randomImage" src="" alt="">
+    <script>
+        const apis = [
+            'https://t.mwm.moe/ycy',
+            'https://t.mwm.moe/ysz',
+            'https://t.mwm.moe/moez',
+            'https://t.mwm.moe/ysmp',
+            'https://t.mwm.moe/moemp'
+        ];
+
+        const randomIndex = Math.floor(Math.random() * apis.length);
+        const randomApi = apis[randomIndex];
+        document.getElementById('randomImage').src = randomApi;
+    </script>
+    <script>
+        const iconUrls = [
+            'https://t.mwm.moe/ycy',
+            'https://t.mwm.moe/ysz',
+            'https://t.mwm.moe/moez',
+            'https://t.mwm.moe/ysmp',
+            'https://t.mwm.moe/moemp'
+        ];
+        const ICOIndex = Math.floor(Math.random() * iconUrls.length);
+        const randomIconUrl = iconUrls[ICOIndex];
+        document.getElementById('favicon').href = randomIconUrl;
+    </script>
+</body>
 
 </html>
