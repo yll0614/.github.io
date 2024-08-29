@@ -11,59 +11,60 @@ body {
     background-repeat: no-repeat;
     background-size: cover; /* 或使用contain等其他值 */
 }
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
-}
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-.header {
-    background-color: #f0f0f0;
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-}
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-.content {
-    background-color: #ffffff;
-    padding: 20px;
-    margin-top: 20px;
-    width: 100%;
-}
+        .header {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
 
-/* 响应式样式 */
-@media (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
+        .content {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-top: 20px;
+        }
 
-    .header {
-        padding: 10px;
-    }
+        /* 响应式样式 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
 
-    .content {
-        padding: 10px;
-        margin-top: 10px;
-    }
-}
+            .header {
+                padding: 10px;
+            }
 
-@media (max-width: 480px) {
-    .container {
-        padding: 5px;
-    }
+            .content {
+                padding: 10px;
+                margin-top: 10px;
+            }
+        }
 
-    .header {
-        padding: 5px;
-    }
+        @media (max-width: 480px) {
+            .container {
+                padding: 5px;
+            }
 
-    .content {
-        padding: 5px;
-        margin-top: 5px;
-    }
-}
+            .header {
+                padding: 5px;
+            }
+
+            .content {
+                padding: 5px;
+                margin-top: 5px;
+            }
+        }
     </style>
     </head>
     <body>
