@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>随机图床</title>
+    <link id="favicon" rel="icon" href="" type="image/x-icon">
+    <style>
+body {
+    background-image: url('./index.png');
+    background-repeat: no-repeat;
+    background-size: cover; /* 或使用contain等其他值 */
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.content {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* 响应式样式 */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .header {
+        padding: 10px;
+    }
+
+    .content {
+        padding: 10px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 5px;
+    }
+
+    .header {
+        padding: 5px;
+    }
+
+    .content {
+        padding: 5px;
+        margin-top: 5px;
+    }
+}
+    </style>
+    </head>
+    <body>
+        <img id="randomImage" src="" alt="">
+        <script>
+    const apis = [
+        'https://t.mwm.moe/ycy',
+        'https://t.mwm.moe/ysz',
+        'https://t.mwm.moe/moez',
+        'https://t.mwm.moe/ysmp',
+        'https://t.mwm.moe/moemp'
+    ];
+
+    const randomIndex = Math.floor(Math.random() * apis.length);
+    const randomApi = apis[randomIndex];
+    document.getElementById('randomImage').src = randomApi;
+</script>
+<script>
+    const iconUrls = [
+        'https://t.mwm.moe/ycy',
+        'https://t.mwm.moe/ysz',
+        'https://t.mwm.moe/moez',
+        'https://t.mwm.moe/ysmp',
+        'https://t.mwm.moe/moemp'
+    ];
+    const ICOIndex = Math.floor(Math.random() * iconUrls.length);
+    const randomIconUrl = iconUrls[ICOIndex];
+    document.getElementById('favicon').href = randomIconUrl;
+</script>
+    </body>
+
+</html>
